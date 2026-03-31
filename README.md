@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+README.md completo (versão limpa)
+Projeto CI/CD - Next.js
 
-## Getting Started
+Este projeto demonstra a implementação de uma pipeline completa de Integração Contínua (CI) e Entrega Contínua (CD) utilizando GitHub Actions e Vercel em uma aplicação Next.js.
 
-First, run the development server:
+Deploy
 
-```bash
+A aplicação está publicada na Vercel no seguinte link:
+https://meu-projeto-ci-cd-three.vercel.app/
+
+Tecnologias utilizadas
+
+Next.js, React, TypeScript, Jest, Testing Library, ESLint, GitHub Actions e Vercel.
+
+Como rodar o projeto localmente
+
+Para clonar o repositório, use:
+git clone https://github.com/FernandaTiveron/meu-projeto-ci-cd.git
+
+Depois entre na pasta do projeto e instale as dependências com:
+npm install
+
+Para rodar o projeto em ambiente de desenvolvimento:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Testes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Para executar os testes automatizados, utilize:
+npm run test
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build do projeto
 
-## Learn More
+Para gerar o build de produção:
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+CI/CD (Integração e Entrega Contínua)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto utiliza GitHub Actions para automatizar o fluxo de CI/CD.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Sempre que há um push ou pull request na branch main, o pipeline executa automaticamente:
 
-## Deploy on Vercel
+Instalação das dependências com npm ci
+Verificação de lint com npm run lint
+Execução dos testes com npm run test
+Build da aplicação com npm run build
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Após a execução bem-sucedida do CI, o projeto é automaticamente implantado na Vercel, garantindo entrega contínua.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Estrutura do projeto
+
+/app → páginas da aplicação
+/components → componentes reutilizáveis
+/tests → testes automatizados
+.github/workflows → configuração do pipeline CI/CD
+
+Status do projeto
+
+CI funcionando
+Testes automatizados
+Build validado
+Deploy automático ativo
